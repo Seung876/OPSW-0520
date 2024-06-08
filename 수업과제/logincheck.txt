@@ -1,0 +1,19 @@
+#!/bin/bash
+
+user=$1
+
+if [ $# -ne 1 ]; then
+    exit 1
+fi
+
+
+while true; 
+do
+    if who | grep -q "^$user "; 
+    then
+        echo "$user 로그인함!"
+    fi
+
+    sleep 60
+    
+done
